@@ -1,0 +1,55 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+class Ponto{
+	protected:
+		int x,y;
+		public:
+		Ponto(){
+			cout<<"\nconstruido";
+			
+			
+			x=0;
+			y=0;
+		}
+	~Ponto(){
+	}
+	void valor(int a,int b){
+		x=a;
+		y=b;
+	}
+};
+
+class Ponto3: public Ponto{
+	int z;
+	public:
+	Ponto3(){
+		cout<<"\nconstruido"<<endl;
+		z=0;
+	}
+	
+	~Ponto3(){}
+	
+	void dvalor(int n,int a,int b){
+		z=n;
+		
+		valor(5,2);
+
+		cout<<"\nvalor de A = "<<a<<"\nvalor de B = "<<b<<endl;
+		cout<<"\n valor de Z= "<<z;	
+		
+	}
+	
+};
+
+main()
+{
+	int a,b,n,z;
+Ponto c;
+Ponto3 d;
+c.valor(a,b);
+d.dvalor(1,5,3);
+//d.exibir();	
+	
+}
